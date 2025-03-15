@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom";
+
 const Login = () => {
   return (
-    <div className="w-full max-w-[1440px] !mx-auto flex justify-center items-center h-full bg-[#918478]">
+    <div id="/login" className="w-screen h-screen flex justify-center items-center bg-[#918478] pl-20">
       <div className="w-[30rem] h-[30rem] flex flex-col justify-center items-center gap-5 bg-[#FFFFFF] text-[#918478] rounded-md px-10 py-12">
         <div>
           <img
@@ -16,14 +18,14 @@ const Login = () => {
         <div className="w-full flex flex-col text-[#918478]">
           <input
             placeholder="User ID or Email"
-            className="border py-2 rounded-md w-full pl-5 outline-none" required
+            className="border py-2 rounded-md w-full pl-5 outline-none"
           />
         </div>
         <div className="relative w-full text-[#918478]">
           <input
             type="password"
             placeholder="Password"
-            className="border py-2 rounded-md w-full pl-5 pr-10 outline-none" required
+            className="border py-2 rounded-md w-full pl-5 pr-10 outline-none" 
           />
         </div>
 
@@ -33,12 +35,14 @@ const Login = () => {
           Login
         </button>
 
-        {/* Forgot Password */}
+        {/* Register */}
+        <Link to="/register" >
         <div className="flex flex-col gap-1">
           <a href="" className="text-sm hover:underline">
             No account yet? Click to register.
           </a>
         </div>
+        </Link>
       </div>
     </div>
   );
