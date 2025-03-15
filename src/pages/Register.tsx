@@ -1,36 +1,47 @@
 const Register = () => {
   return (
-    <div
-      id="register"
-      className="w-full max-w-[1440px] !mx-auto flex justify-center items-center h-full bg-[#918478]"
-    >
-      <div className="border rounded-md">
-        <div className="w-[25rem] h-[30rem] flex flex-col justify-center items-center gap-5 text-[#FFFFFF]">
-          <div>
-            <img
-              src="/images/wmsu_logo.png"
-              alt="logo"
-              className="w-30 h-30 object-cover object-top"
-            />
+    <div id="register" className="w-full h-screen flex">
+      <div className="w-1/2 h-full flex justify-center items-center bg-[#BB3333]">
+        <div className="w-[40rem] h-[40rem] flex flex-col items-center gap-5 bg-[#FFFFFF] text-[#918478] rounded-md px-10 py-12">
+          <p className="text-2xl font-bold py-5">REGISTER TO VOTE</p>
+
+          {/* Username and password */}
+          <div className="w-full flex gap-x-2">
+            <div className="w-1/2 h-full py-5">
+                <p className="text-left">First Name</p>
+                <input type="text" className="border py-2 rounded-md w-full pl-5 outline-none" />
+            </div>
+            <div className="w-1/2 h-full py-5">
+                <p className="text-left">Last Name</p>
+                <input type="text" className="border py-2 rounded-md w-full pl-5 outline-none" />
+            </div>
           </div>
-          <p className="text-4xl font-bold text-balance">
-            Register to start voting
-          </p>
+          <div className="w-full flex flex-col gap-2">
+            <p className="text-left">Email address</p>
+            <input
+              type="email"
+              placeholder="xt2020-XXXXX@wmsu.edu.ph"
+              className="border py-2 rounded-md w-full pl-5 outline-none"
+            />
+            <div className="w-full flex flex-col gap-2">
+                <p className="text-left">Password</p>
+                <input type="password" placeholder="Password" className="border py-2 rounded-md w-full pl-5 outline-none" />
+            </div>
+
+            {/* Register button */}
+
+            <button className="bg-[#BB3333] text-[#FFFFFF] py-2 rounded-md hover:border hover:border-white">Register Account</button>
+          </div>
         </div>
       </div>
-      {/* Form */}
-      <div className="w-[25rem] h-[20rem] w-full justify-center flex flex-col rounded-md gap-2 bg-[#FFFFFF]">
-        <p className="text-left text-[#918478]">Email Address</p>
-        <input
-          type="email"
-          placeholder="name@wmsu.edu.ph"
-          className="border py-2 rounded-md w-full pl-5 outline-none text-[#918478]"
-        />
-        <p className="text-left text-[#918478]">Password</p>
-        <input type="password" placeholder="Password" className="border py-2 rounded-md w-full pl-5 outline-none text-[#918478]" />
-
-        {/* Create account */}
-        <button className="w-full py-2 rounded-full bg-[#918478] font-semibold ">Create account</button>
+      <div className="w-1/2 h-full bg-[#A33333]">
+        <div className="w-full h-full flex justify-center items-center">
+          <img
+            src="/images/WMSU.png"
+            alt="logo"
+            className="w-full h-full object-cover object-cover"
+          />
+        </div>
       </div>
     </div>
   );
