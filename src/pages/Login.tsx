@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
-    <div id="/login" className="w-screen h-screen flex justify-center items-center bg-[#918478] pl-20">
+    <div id="/login" className="w-screen h-screen flex justify-center items-center bg-[#BB3333] pl-20">
       <div className="w-[30rem] h-[30rem] flex flex-col justify-center items-center gap-5 bg-[#FFFFFF] text-[#918478] rounded-md px-10 py-12">
         <div>
           <img
@@ -31,9 +31,11 @@ const Login = () => {
 
         {/* Login button */}
 
-        <button className="px-10 py-2 rounded-md border border-[#918478] bg-[#918478] font-semibold text-[#FFFFFF]">
+        <Link to="/admindashboard">
+        <button className="px-10 py-2 rounded-md border border-[#918478] bg-[#BB3333] font-semibold text-[#FFFFFF]">
           Login
         </button>
+        </Link>
 
         {/* Register */}
         <Link to="/register" >
