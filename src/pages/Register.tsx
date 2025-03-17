@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import { IoMdArrowBack } from "react-icons/io";
 
 const Register = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <div id="register" className="w-full h-screen flex">
       <div className="w-1/2 h-full flex justify-center items-center bg-[#BB3333]">
@@ -48,9 +50,26 @@ const Register = () => {
 
             {/* Register button */}
 
-            <button className="bg-[#BB3333] text-[#FFFFFF] py-2 rounded-md hover:border hover:border-white">
+            <button className="bg-[#BB3333] text-[#FFFFFF] py-2 rounded-md hover:border hover:border-white"
+            onClick={() => setIsModalOpen(true)}>
               Register Account
             </button>
+
+            {/* Modal */}
+
+            {isModalOpen && (
+              <div className="fixed inset-0 flex justify-center items-center bg-opacity-30 backdrop-blur-md">
+                <div className="bg-white p-5 rounded-md w-[25rem] text-center shadow-xl">
+                  <p className="text-lg font-semibold">
+                  A verification code was sent to your institutional account.
+                  </p>
+                  <button className="mt-4 bg-[#BB3333] text-white px-4 py-2 rounded-md"
+                  onClick={() => setIsModalOpen(false)}>
+                    Close
+                  </button>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>
