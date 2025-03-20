@@ -31,8 +31,8 @@ const Login = () => {
 
         {/* Login button */}
 
-        <Link to="/admindashboard">
-        <button className="px-10 py-2 rounded-md border border-[#918478] bg-[#BB3333] font-semibold text-[#FFFFFF]">
+        <Link to="/dashboard">
+        <button className="px-10 py-2 rounded-md border border-[#918478] bg-[#BB3333] hover:bg-[#8E3333] font-semibold text-[#FFFFFF]">
           Login
         </button>
         </Link>
